@@ -11,8 +11,13 @@ class Participantes extends Component
 
     public function render()
     {
+        $query = collect();
+
+        if($this->search != ""){
+            $query = Participante::where('dni','LIKE','%'.$this->search.'%')->orWhere('fullname','LIKE','%'.$this->search.'%')->get();
+        }
         return view('livewire.participantes',[
-            'participantes' => Participante::where('dni',$this->search)->get()
+            'participantes' => $query
         ]);
     }
 

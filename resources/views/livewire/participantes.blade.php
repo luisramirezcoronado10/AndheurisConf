@@ -4,7 +4,7 @@
             <div class="col-lg-4 offset-lg-4">
                 <div class="mt-4">
                     <label class="form-label">Buscar participante</label>
-                    <input wire:model="search" type="number" class="form-control" placeholder="Ingresar DNI">
+                    <input wire:model="search" type="text" class="form-control" placeholder="Ingresar DNI, nombres o apellidos">
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                 @else
                     <div class="text-center">
                         <img src="assets/images/empty.png" width="50%" alt="empty">
-                        <p>No se econtraron resultados</p>
+                        <p>No se encontraron resultados</p>
                     </div>
                 @endif
             </div>
